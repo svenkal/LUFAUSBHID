@@ -31,7 +31,7 @@ static uint8_t PrevKeyboardHIDReportBuffer[sizeof(USB_KeyboardReport_Data_t)]; /
 USB_ClassInfo_HID_Device_t Keyboard_HID_Interface = {
 	.Config = {
 		.InterfaceNumber = INTERFACE_ID_Keyboard,
-		.ReportINEndpoint = { // IN Endpoint for Keyboard LED status
+		.ReportINEndpoint = { // IN = device to host, reports pressed keys
 				.Address  = KEYBOARD_EPADDR,
 				.Size = KEYBOARD_EPSIZE,
 				.Banks = 1,
